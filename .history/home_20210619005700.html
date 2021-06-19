@@ -32,53 +32,26 @@
     // this syntax should go just above your render method
     // Class Syntax: https://kirupa.com/javascript/classy_way_to_create_objects.htm
 
-//     class HelloWorld extends React.Component {
-//     render() {
-//         return <p>Hello, {this.props.greetTarget}!</p>
-//   }
-// }
+    class HelloWorld extends React.Component {
+    render() {
+        return <p>Hello, componentized world!</p>
+  }
+}
 
     // Now replace your render method with the new class like so:
 
-//     ReactDOM.render(
-//         <div>
-//             <HelloWorld greetTarget="Batman"/>
-//             <HelloWorld greetTarget="Iron Man"/>
-//             <HelloWorld greetTarget="Nicolas Cage"/>
-//             <HelloWorld greetTarget="Mega Man"/>
-//             <HelloWorld greetTarget="Bono"/>
-//             <HelloWorld greetTarget="Catwoman"/>
-//         </div>,
-//     document.querySelector("#container")
-// );
+    ReactDOM.render(
+        <div>
+            <HelloWorld/>
+            <HelloWorld/>
+            <HelloWorld/>
+            <HelloWorld/>
+            <HelloWorld/>
+            <HelloWorld/>
+        </div>,
+    document.querySelector("#container")
+);
 
-        // Just as you can have many HTML elements, your
-        // components can have children
-        // <CleverComponent foo="bar">
-        //     <p>Something!</p>
-        // </CleverComponent>
-        // You have the capability to access the p child elem
-        // and any children it has via the this.props.children
-
-        // Another example to make sense of all this, this time
-        // we have a component called Buttonify that wraps its children
-        // inside a button:
-        class Buttonify extends React.Component {
-            render() {
-                return(
-                    <div>
-                        <button type={this.props.behavior}>{this.props.children}</button>
-                    </div>
-                ); 
-            }
-        }
-        //You can use this component by calling it via the ReactDOM.render method, as shown here:
-        ReactDOM.render(
-            <div>
-                <Buttonify behavior="submit">SEND DATA</Buttonify>
-            </div>,
-            document.querySelector("#container")
-        );
         // ReactDOM.render(
         //     <h1>Blake Redwolf</h1>,
         //     document.querySelector("#container")
