@@ -1,0 +1,111 @@
+<!Doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>React! React! React!</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+        <!-- <style>
+            #container {
+                padding: 50px;
+                background-color: #eee;
+            }
+            #container h1 {
+                font-size: 144px;
+                font-family: sans-serif;
+                color: #0080A8;
+            }
+        </style> -->
+
+    </head>
+
+<body>
+
+<div id="container"></div>
+    <script type="text/babel">
+
+    // Lets recreate all of this by using a component. React gives us several ways
+    // of creating components, but we are going to create them by using class syntax
+    // this syntax should go just above your render method
+    // Class Syntax: https://kirupa.com/javascript/classy_way_to_create_objects.htm
+
+    class HelloWorld extends React.Component {
+        render() {
+            return <p>Hello Componentized World!</p>
+        }
+    }
+
+    // Now replace your render method with the new class like so:
+
+    ReactDOM.render(
+        <HelloWorld/>,
+            document.querySelector("#container")
+    );
+    
+
+        // ReactDOM.render(
+        //     <h1>Blake Redwolf</h1>,
+        //     document.querySelector("#container")
+        // );
+
+        // Another option is to do some things outside the render method itself
+        // var destination = document.querySelector("#container")
+
+        // ReactDOM.render(
+        //     <h1>Blake Redwolf!</h1>,
+        //     destination
+        // );
+
+        // Quick review of functions
+        // In a terrible world where functions dont <exist>
+            // var speed = 10;
+            // var time = 5;
+            // alert(speed * time);
+
+            // var speed = 85;
+            // var time = 1.5;
+            // alert(speed * time);
+
+            // var speed = 12;
+            // var time = 9;
+            // alert(speed * time);
+
+            // var speed = 42;
+            // var time = 12;
+            // alert(speed * time);
+
+            // In a really chill world with functions you can condense all that dup
+            // text into something simple:
+
+            // function getDistance(speed, time) {
+            //     var result = speed * time;
+            //     alert(result);
+            // }
+
+            // to call this function 
+            // getDistance(10, 5);
+            // getDistance(85, 1.5);
+            // getDistance(12, 9);
+            // getDistance(42,12);
+
+            // way better, your functions like the alert inside getDistance can call other
+            // functions too as part of there running. Look at a formatDistance function
+            // to change what getDistance returns
+
+            // function formatDistance(distance) {
+            //     return distance + " km";
+            // }
+
+            // function getDistance(speed, time) {
+            //     var result = speed * time;
+            //     alert(formatDistance(result));
+            // }
+
+    </script>
+
+</body>
+
+</html>
