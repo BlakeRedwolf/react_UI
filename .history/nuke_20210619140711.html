@@ -34,33 +34,32 @@
     var destination = document.querySelector("#container");
    
     class Letter extends React.Component {
-  render() {
-    var letterStyle = {
-      padding: 10,
-      margin: 10,
-      backgroundColor: this.props.bgcolor,
-      color: "#333",
-      display: "inline-block",
-      fontFamily: "monospace",
-      fontSize: 32,
-      textAlign: "center"
-    };
- 
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+      render() {
+        var letterStyle = {
+          padding: 10,
+          margin: 10,
+          backgroundColor: "#FFDE00",
+          color: "#333",
+          display: "inline-block",
+          fontFamily: "monospace",
+          fontSize: 32,
+          textAlign: "center"
+        };
+        return(
+          <div>
+            {this.props.children}
+          </div>
+        );
+      }
+    }
    
     ReactDOM.render(
       <div>
-        <Letter bgcolor="#58B3FF">B</Letter>
-        <Letter bgcolor="#FF605F">L</Letter>
-        <Letter bgcolor="#FFD52E">A</Letter>
-        <Letter bgcolor="#49DD8E">K</Letter>
-        <Letter bgcolor="#AE99FF">E</Letter>
+        <Letter bgcolor="#58B3FF">A</Letter>
+        <Letter bgcolor="#FF605F">E</Letter>
+        <Letter bgcolor="#FFD52E">I</Letter>
+        <Letter bgcolor="#49DD8E">O</Letter>
+        <Letter bgcolor="#AE99FF">U</Letter>
       </div>,
       destination
     );
